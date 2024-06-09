@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebEuroCorp.Models.AutorModel>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Lista de Autores</h1>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">
+        @ViewBag.Message
+    </div>
+}
+
+<div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary" id="btnCrearAutor">Crear Autor</button>
+</div>
+
+
+
+<table id="tablaAutores" class="display">
+    <thead>
+        <tr>
+            <th>RUT</th>
+            <th>Nombre Completo</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Ciudad</th>
+            <th>Correo Electrónico</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tablaAutoresBody">
+    </tbody>
+</table>
+
+
